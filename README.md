@@ -4,4 +4,4 @@ This bot on aiogram3 allows you to send messages with buttons in format `with @b
 Just type ```@BotUserName your normal text || first button text - t.me/first_link | second button on this line - example.com / third button on another line - example.com/3```
 
 
-Russian test bot - t.me/TheInlineButtonBot
+Russian test bot - [@TheInlineButtonBot](https://t.me/TheInlineButtonBot)
