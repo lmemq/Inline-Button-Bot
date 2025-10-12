@@ -16,7 +16,7 @@ dp = Dispatcher()
 @dp.message(Command("start"))
 async def start(message: types.Message):
     # here you can place your guide how to use bot
-    await message.reply_video(video="BAACAgIAAxkBAAMlaCRoKIPjkLixufqvSDU7bV7A19sAAhGQAAIVCyFJTFMujEJmVK02BA", show_caption_above_media=True, caption="Привет! Я - бот, который поможет отправлять тебе сообщения с кнопками в любое место!\nЧтобы это сделать, напиши в любом чате это: `@TheInlineButtonBot любое сообщение || текст кнопки - ссылка-кнопки.рф | та же строка - ссылка.рф / следующая строка - ссылка.рф`", parse_mode="markdown")
+    await message.reply_video(video="BAACAgIAAxkBAAMlaCRoKIPjkLixufqvSDU7bV7A19sAAhGQAAIVCyFJTFMujEJmVK02BA", show_caption_above_media=True, caption="Hello! To use me, write in chat this:!\n`@BotUserName your normal text || first button text - t.me/first_link | second button on this line - example.com / third button on another line - example.com/3`", parse_mode="markdown")
 
 
 def get_message_text(text):
@@ -43,7 +43,7 @@ async def show_user_links(inline_query: types.InlineQuery):
     try:
         results = [InlineQueryResultArticle(
             id=str(uuid4()),
-            title="Отправить",
+            title="Send",
             input_message_content=InputTextMessageContent(
                 message_text=inline_query.query.split(" || ")[0],
                 parse_mode="markdown"
